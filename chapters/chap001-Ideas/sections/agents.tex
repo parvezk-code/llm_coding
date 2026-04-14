@@ -1,0 +1,51 @@
+
+\section{PI : Personal Intelligence}
+    \begin{enumerate}
+        \item AI systems tailored to an individual user
+        \item Maintains context, memory, preferences
+        \item Example - AI copilots for coding, research, Chat-based assistants with memory, etc.
+    \end{enumerate}
+
+\section{Mono-Agent Architecture}
+    \begin{enumerate}
+        \item Single LLM agent handles everything
+        \item One prompt, one reasoning loop, one output
+        \item Simple, Easier to debug, Limited scalability, Hard to specialize
+        \item LangChain Framework
+            \begin{enumerate}
+                \item Prompt chaining 
+                \item Tool integration (APIs, DBs)
+                \item Memory and Agents (basic orchestration)
+                \item Good for - Pipelines, RAG, Simple agents
+            \end{enumerate}
+    \end{enumerate}
+
+\section{Multi-Agent Architecture}
+    \begin{enumerate}
+        \item Multiple LLM agent 
+        \item Each with different roles
+        \item They collaborate, debate, or delegate tasks
+        \item Example roles - Planner, Researcher, Coder, Critic
+        \item Modular, Scalable, More powerful workflows, Coordination complexity
+        \item AutoGPT Framework
+            \begin{enumerate}
+                \item autonomous agent systems
+                \item Goal-based execution
+                \item Iterative reasoning loop : (Think, Act, Observe, Repeat)
+                \item Can use tools (web, files, APIs)
+            \end{enumerate}
+            
+        \clearpage
+        \item CrewAI Framework
+            \begin{enumerate}
+                \item for multi-agent collaboration
+                \item Define agents with roles, Assign tasks, Manage workflow between agents
+                \item Example
+                \begin{enumerate}
+                    \item Manager : assigns task
+                    \item Researcher : gathers info
+                    \item Writer : generates output
+                    \item Reviewer : improves it
+                \end{enumerate}
+            \end{enumerate}
+    \end{enumerate}

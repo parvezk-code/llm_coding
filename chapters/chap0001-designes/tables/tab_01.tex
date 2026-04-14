@@ -1,0 +1,70 @@
+\begin{simpleCenteringTempChapterTable}{Chat‑PDF stack: Python vs JavaScript}
+\def\cellOneA{\textbf{Layer}}
+\def\cellOneB{\textbf{Python tools}}
+\def\cellOneC{\textbf{JS tools}}
+
+\def\cellTwoA{Frontend / UI}
+\def\cellTwoB{Streamlit}
+\def\cellTwoC{Next.js}
+
+\def\cellThreeA{\makecell[l]{Frontend framework \\ (optional)} }
+
+\def\cellThreeB{--}
+\def\cellThreeC{React}
+
+\def\cellFourA{Backend HTTP server}
+\def\cellFourB{FastAPI}
+\def\cellFourC{Next.js API routes / Express}
+
+\def\cellFiveA{File upload handling}
+\def\cellFiveB{FastAPI + \texttt{UploadFile}}
+\def\cellFiveC{\makecell[l]{Browser \texttt{FormData} \textbackslash\\\texttt{fetch} + backend handler}}
+
+\def\cellSixA{\makecell[l]{PDF text extraction \\ parsing} }
+\def\cellSixB{\makecell[l]{PyMuPDF, LlamaParse, \textbackslash\\\texttt{unstructured} + LangChain \textbackslash\\PDF loader}}
+\def\cellSixC{\makecell[l]{LlamaParse, \texttt{pdf.js} \textbackslash\\(client‑only), \texttt{unstructured} \textbackslash\\via backend}}
+
+\def\cellSevenA{\makecell[l]{scanned‑PDF parsing \\ OCR} }
+\def\cellSevenB{\makecell[l]{Google Document AI, \textbackslash\\Amazon Textract, \textbackslash\\Azure Document Intelligence}}
+\def\cellSevenC{\makecell[l]{Google Document AI, \textbackslash\\Amazon Textract, \textbackslash\\Azure Document Intelligence \\ (via REST API)}}
+
+\def\cellEightA{Embedding generation}
+\def\cellEightB{\makecell[l]{OpenAI embeddings API, \textbackslash\\\texttt{sentence-transformers}}}
+\def\cellEightC{OpenAI embeddings API}
+
+\def\cellNineA{\makecell[l]{Vector DB \\ local \textbackslash MVP} }
+\def\cellNineB{\makecell[l]{ChromaDB, FAISS}}
+\def\cellNineC{ChromaDB (via backend)}
+
+\def\cellTenA{Vector DB (cloud)}
+\def\cellTenB{\makecell[l]{Pinecone, Qdrant}}
+\def\cellTenC{\makecell[l]{Pinecone, Qdrant}}
+
+\def\cellElevenA{LLM for chat answers}
+\def\cellElevenB{\makecell[l]{OpenAI SDK, \textbackslash\\Anthropic SDK (Claude)}}
+\def\cellElevenC{\makecell[l]{Vercel AI SDK (OpenAI/Claude), \textbackslash\\OpenAI SDK, Anthropic SDK}}
+
+\def\cellTwelveA{Chat UI components}
+\def\cellTwelveB{--}
+\def\cellTwelveC{\makecell[l]{Vercel AI SDK components, \textbackslash\\React chat UI}}
+
+\def\cellThirteenA{Metadata / doc storage}
+\def\cellThirteenB{\makecell[l]{PostgreSQL (with \texttt{pgvector} \textbackslash\\optional), local files}}
+\def\cellThirteenC{\makecell[l]{PostgreSQL or cloud DB, \textbackslash\\S3/R2, via backend}}
+
+\begin{tabular}{|l|l|l|} \hline
+\cellOneA & \cellOneB & \cellOneC \\ \hline
+\cellTwoA & \cellTwoB & \cellTwoC \\ \hline
+\cellThreeA & \cellThreeB & \cellThreeC \\ \hline
+\cellFourA & \cellFourB & \cellFourC \\ \hline
+\cellFiveA & \cellFiveB & \cellFiveC \\ \hline
+\cellSixA & \cellSixB & \cellSixC \\ \hline
+\cellSevenA & \cellSevenB & \cellSevenC \\ \hline
+\cellEightA & \cellEightB & \cellEightC \\ \hline
+\cellNineA & \cellNineB & \cellNineC \\ \hline
+\cellTenA & \cellTenB & \cellTenC \\ \hline
+\cellElevenA & \cellElevenB & \cellElevenC \\ \hline
+\cellTwelveA & \cellTwelveB & \cellTwelveC \\ \hline
+\cellThirteenA & \cellThirteenB & \cellThirteenC \\ \hline
+\end{tabular}
+\end{simpleCenteringTempChapterTable}
