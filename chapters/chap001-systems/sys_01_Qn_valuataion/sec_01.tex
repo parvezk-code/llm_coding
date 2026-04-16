@@ -1,6 +1,13 @@
 \section{Question Valuation}
 
     \begin{enumerate}
-        \item Stage 1 \\  required fields must exist. fields like question text, desired answer, and student response text should not be null. 
-        \item Stage 2 \\ save json data into database.
+        \item[Stage 1] Data Validation \\  required fields must exist. fields like question text, desired answer, and student response text should not be null. 
+        \item[Stage 2] DB layer \\ save json data into database. Tables(QuestionSet, studentResponse, Rubrics)
+        \item[Stage 3] Prompt builder \\ create system prompt and user prompt. for each criteria in rubrics one prompt is created. Multiple prompts, one per rubric criterion.
+        \item[Stage 4] LLM Call \\  send user and system prompt to LLM. This stage should ideally ask the LLM to return structured output, not loose text. OpenAI recommends structured outputs and schema-constrained responses for reliable downstream parsing, and clear prompt instructions also help improve consistency.
+        \item[Stage 5] Response parser \\ Even if you ask the LLM for JSON, the response can still be semantically invalid.  
+        \item[Stage 6] DB layer \\ save Criteria score, justification, evidence in DB.
+        \item[Stage 7] Score Aggregator \\ fetch all criterion results for a given question and verify all expected rubric criteria are present. sum or weight the criterion scores according to the rubric. Verify all rubric criteria were graded, no criterion score exceeds its allowed marks, totals are internally consistent, missing results trigger failure. 
+        \item[Stage 8] DB layer \\ save total score in DB.
+        \item[Stage 9] Feedback Generator \\ including strengths,  weaknesses, comments, suggestions
     \end{enumerate}

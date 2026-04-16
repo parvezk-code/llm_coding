@@ -1,64 +1,60 @@
-\begin{simpleCenteringTempChapterTable}{Table with environment}
+\begin{simpleCenteringTempChapterTable}{Stages of Valuation}
 	\def\cellLayer{Tools}
 	\def\cellPy{Input}
 	\def\cellJs{Output}
 	
 	\def\cellTwoA{\makecell[l]{Validator \\ Program }}
 	\def\cellTwoB{\makecell[l]{Questions rubrics JSON \\ Student submission JSON }}
-	\def\cellTwoC{\makecell[l]{Validation report : success or failure, validation errors }}
+	\def\cellTwoC{\makecell[l]{Validation report : success or failure, \\ validation errors }}
 	
 	\def\cellThreeA{\makecell[l]{Persistence \\ Program }}
 	\def\cellThreeB{\makecell[l]{Questions rubrics JSON \\ Student submission JSON }}
 	\def\cellThreeC{Database records saved in DB}
 	
-	\def\cellRubricA{\makecell[l]{Question and \\ rubric storage }}
-	\def\cellRubricB{PostgreSQL (JSON‑field rubrics)}
-	\def\cellRubricC{\makecell[l]{Same; stored server‑side, \\  exposed via API }}
+	\def\cellFourA{\makecell[l]{Grading Prompt\\ Builder }}
+	\def\cellFourB{\makecell[l]{System prompt template, \\ user prompt template, \\ question text, max marks,\\ desired answer, \\ student response text, \\ rubric criteria }}
+	\def\cellFourC{\makecell[l]{system prompt, user prompt  }}
 	
-	\def\cellLlmA{LLM grader API}
-	\def\cellLlmB{\makecell[l]{OpenAI (Structured Outputs) \\ Anthropic }}
-	\def\cellLlmC{\makecell[l]{OpenAI SDK, Anthropic SDK, \\  Vercel AI SDK }}
+	\def\cellFiveA{LLM grader API}
+	\def\cellFiveB{\makecell[l]{system prompt,\\ user prompt, \\ llm config }}
+	\def\cellFiveC{\makecell[l]{LLM response raw or structured(json)}}
 	
-	\def\cellStructA{\makecell[l]{Structured grading \\ format }}
-	\def\cellStructB{\makecell[l]{OpenAI Structured Outputs/ \\ Pydantic models }}
-	\def\cellStructC{\makecell[l]{OpenAI Structured Outputs \\  in JSON schema }}
+	\def\cellSixA{\makecell[l]{LLM Response \\ Parser }}
+	\def\cellSixB{\makecell[l]{LLM response }}
+	\def\cellSixC{\makecell[l]{Criteria score, justification, evidence}}
+
+	\def\cellSevenA{\makecell[l]{Persistence \\ Program }}
+	\def\cellSevenB{\makecell[l]{Criteria score, \\justification, evidence }}
+	\def\cellSevenC{Database records saved in DB}
 	
-	\def\cellTestA{\makecell[l]{Prompt and \\ rubric testing }}
-	\def\cellTestB{Promptfoo}
-	\def\cellTestC{\makecell[l]{Promptfoo \\  (run from Node/Python glue) }}
+	\def\cellEightA{\makecell[l]{Score \\ Aggregator }}
+	\def\cellEightB{\makecell[l]{All Criteria scores \\ of a question }}
+	\def\cellEightC{Total marks saved in DB}
 	
-	\def\cellObsA{Observability and eval}
-	\def\cellObsB{Langfuse}
-	\def\cellObsC{Langfuse}
+	\def\cellNineA{\makecell[l]{Persistence \\ Program }}
+	\def\cellNineB{\makecell[l]{Total score }}
+	\def\cellNineC{Database records saved in DB}
 	
-	\def\cellMetricA{\makecell[l]{Scoring analysis/ \\  metrics }}
-	\def\cellMetricB{Ragas, pandas}
-	\def\cellMetricC{\makecell[l]{Ragas (via backend) \\  custom analytics }}
+	\def\cellTenA{\makecell[l]{Feedback Generator }}
+	\def\cellTenB{Student scores}
+	\def\cellTenC{\makecell[l]{feedback including strengths \\  weaknesses, comments, suggestions }}
+	
+	\def\cellElevenA{\makecell[l]{Prompt testing\\ Promptfoo }}
+	\def\cellElevenB{Prompts}
+	\def\cellElevenC{\makecell[l]{proper response }}
 	 
-	\def\cellDashboardA{\makecell[l]{Human review/ \\  dashboard }}
-	\def\cellDashboardB{FastAPI + Streamlit / Flask}
-	\def\cellDashboardC{\makecell[l]{Next.js admin UI with \\  React/TanStack Table }}
-	
-	\def\cellUploadA{Client upload}
-	\def\cellUploadB{Python backend handles files}
-	\def\cellUploadC{\makecell[l]{React form + fetch/ \\  FormData to backend }}
-	
-	\def\cellSharedA{Shared / cloud services}
-	\def\cellSharedB{\makecell[l]{OpenAI, Anthropic, Promptfoo, \\ Langfuse, Ragas }}
-	\def\cellSharedC{\makecell[l]{Same; consumed via HTTP/SDKs \\  from either language }}
 
 	\begin{tabular}{|l|l|l|} \hline
 		\cellLayer 		& \cellPy 			& \cellJs 			\\ \hline
 		\cellTwoA 		& \cellTwoB 		& \cellTwoC 		\\ \hline
 		\cellThreeA 	& \cellThreeB 		& \cellThreeC 		\\ \hline
-		% \cellRubricA 	& \cellRubricB 		& \cellRubricC 		\\ \hline
-		% \cellLlmA 		& \cellLlmB 		& \cellLlmC 		\\ \hline
-		% \cellStructA 	& \cellStructB 		& \cellStructC 		\\ \hline
-		% \cellTestA 		& \cellTestB 		& \cellTestC 		\\ \hline
-		% \cellObsA 		& \cellObsB 		& \cellObsC 		\\ \hline
-		% \cellMetricA 	& \cellMetricB 		& \cellMetricC 		\\ \hline
-		% \cellDashboardA & \cellDashboardB 	& \cellDashboardC 	\\ \hline
-		% \cellUploadA 	& \cellUploadB 		& \cellUploadC 		\\ \hline
-		% \cellSharedA 	& \cellSharedB 		& \cellSharedC 		\\ \hline
+		\cellFourA 		& \cellFourB 		& \cellFourC 		\\ \hline
+		\cellFiveA 		& \cellFiveB 		& \cellFiveC 		\\ \hline
+		\cellSixA 		& \cellSixB 		& \cellSixC 		\\ \hline
+		\cellSevenA 	& \cellSevenB 		& \cellSevenC 		\\ \hline
+		\cellEightA 	& \cellEightB 		& \cellEightC 		\\ \hline
+		\cellNineA 		& \cellNineB 		& \cellNineC 		\\ \hline
+		\cellTenA 		& \cellTenB 		& \cellTenC 		\\ \hline
+		\cellElevenA 	& \cellElevenB 		& \cellElevenC 		\\ \hline
 	\end{tabular}
 \end{simpleCenteringTempChapterTable}
