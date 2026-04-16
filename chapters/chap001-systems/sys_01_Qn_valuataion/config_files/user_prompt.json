@@ -17,6 +17,7 @@ INSTRUCTIONS FOR THIS CALL
 ---
 - Evaluate ONLY the criterion above ("{{criterion_name}}").
 - Assign a score between 0 and {{max_marks_for_criterion}}.
+- Do not penalize correct answers that differ from the model answer but satisfy the rubric.
 - Write a short justification.
 - Provide 1-3 short evidence snippets taken directly from the student answer.
 - Output ONLY a JSON object using the exact format described in the system prompt.
